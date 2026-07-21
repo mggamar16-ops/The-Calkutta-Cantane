@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Calcutta Canteen — Mediterranean Dining in Durgapur</title>
+  <meta name="description" content="A beloved Durgapur neighbourhood restaurant, reimagined. The Calcutta Canteen now offers a dedicated Mediterranean menu in a warm, intimate setting opposite Sanaka Hospital." />
+  <meta name="keywords" content="restaurant Durgapur, Mediterranean restaurant, Calcutta Canteen, dining Durgapur, Sanaka Hospital restaurant" />
+  <meta property="og:title" content="The Calcutta Canteen — Mediterranean Dining in Durgapur" />
+  <meta property="og:description" content="Something changed in Durgapur. A familiar neighbourhood place, rebuilt. Come inside." />
+  <meta property="og:type" content="restaurant" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/main.css" />
+
+  <!-- SVG heat distortion filter -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <filter id="heat-distort" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.015 0.04" numOctaves="3" seed="5" result="noise">
+          <animate attributeName="baseFrequency" values="0.015 0.04;0.016 0.042;0.015 0.04" dur="3s" repeatCount="indefinite"/>
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
+</head>
+
+<body>
+
+  <!-- Custom Cursor -->
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ─────────────────────────────
+       NAVIGATION
+  ───────────────────────────── -->
+  <nav id="nav" role="navigation" aria-label="Main navigation">
+    <a href="#arrival" class="nav-logo" aria-label="The Calcutta Canteen — Home">
+      The Calcutta Canteen
+    </a>
+    <ul class="nav-links">
+      <li><a href="#discovery" id="nav-story">Our Story</a></li>
+      <li><a href="#discovery" id="nav-menu">The Menu</a></li>
+      <li><a href="#the-room" id="nav-room">The Room</a></li>
+      <li><a href="#trust" id="nav-reviews">Reviews</a></li>
+    </ul>
+    <a href="#reservation" class="nav-cta" id="nav-reserve">Reserve a Table</a>
+  </nav>
+
+  <!-- ─────────────────────────────
+       SECTION 1 — ARRIVAL
+  ───────────────────────────── -->
+  <section id="arrival" aria-label="Welcome to The Calcutta Canteen">
+    <div class="arrival-bg" role="img" aria-label="Restaurant entrance at dusk"></div>
+    <div class="arrival-overlay" aria-hidden="true"></div>
+
+    <div class="arrival-content">
+      <span class="arrival-label">Durgapur, West Bengal — Est. The Calcutta Canteen</span>
+      <span class="arrival-headline">Something<br/>Changed<br/>in Durgapur.</span>
+      <p class="arrival-sub">
+        A neighbourhood place, rebuilt. Mediterranean dining — rooted here.
+      </p>
+    </div>
+
+    <div class="arrival-scroll-hint" aria-hidden="true">
+      <span>Come inside</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────
+       SECTION 2 — DISCOVERY
+  ───────────────────────────── -->
+  <section id="discovery" aria-label="Our story and ingredients">
+    <div class="discovery-inner">
+      <span class="section-eyebrow reveal-up">The Transformation</span>
+
+      <div class="discovery-scene" style="display: flex; flex-wrap: wrap;">
+        <!-- Text Column -->
+        <div class="discovery-text-col">
+          <h2 class="disc-headline reveal-up">
+            Mediterranean<br/>
+            <em>through</em><br/>
+            Bengal eyes.
+          </h2>
+          <p class="disc-body reveal-up delay-1">
+            We didn't import a concept. We built one — sourcing from the markets
+            we know, the suppliers we trust, and the neighbourhood we've served for years.
+            The ingredients are Mediterranean. The hands are Bengali. The table is yours.
+          </p>
+
+          <div class="disc-captions">
+            <p class="disc-caption">
+              "Olive oil, from Crete. Pressed last October."
+            </p>
+            <p class="disc-caption">
+              "The brass is from Park Street. The lemons are from Darjeeling foothills."
+            </p>
+            <p class="disc-caption">
+              "We didn't change what we believed in. We changed what we served."
+            </p>
+          </div>
+        </div>
+
+        <!-- Image Column with parallax ingredients -->
+        <div class="discovery-img-col" style="position: relative;">
+          <div class="ingredient-obj ing-main" style="perspective: 600px;">
+            <img src="assets/ingredients_spread.png" 
+                 alt="Mediterranean ingredients — lemons, olives, herbs, sea salt — arranged on brass and jute surfaces"
+                 width="380" height="280" loading="lazy" />
+          </div>
+          <div class="ingredient-obj ing-accent" style="perspective: 600px;">
+            <img src="assets/kitchen_craft.png"
+                 alt="Skilled kitchen craft — open flame, olive oil, fresh herbs"
+                 width="240" height="200" loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu Teaser Cards -->
+      <div class="menu-tease" aria-label="Signature menu items">
+        <article class="menu-item-card reveal-up">
+          <p class="menu-item-origin">Starter</p>
+          <h3 class="menu-item-name">Za'atar Hummus</h3>
+          <p class="menu-item-story">Cold-pressed olive oil, za'atar crust, warm flatbread. Rested for two hours before serving.</p>
+          <p class="menu-item-price">₹ 220</p>
+        </article>
+        <article class="menu-item-card reveal-up delay-1">
+          <p class="menu-item-origin">Mezze</p>
+          <h3 class="menu-item-name">Sumac Roasted Vegetables</h3>
+          <p class="menu-item-story">Local market produce, ordered daily. Roasted with sumac and finished with lemon zest.</p>
+          <p class="menu-item-price">₹ 290</p>
+        </article>
+        <article class="menu-item-card reveal-up delay-2">
+          <p class="menu-item-origin">Main</p>
+          <h3 class="menu-item-name">Grilled Chicken Shawarma Platter</h3>
+          <p class="menu-item-story">Marinated overnight. Every sauce is finished by hand — no premix, no shortcuts.</p>
+          <p class="menu-item-price">₹ 420</p>
+        </article>
+        <article class="menu-item-card reveal-up delay-3">
+          <p class="menu-item-origin">Dessert</p>
+          <h3 class="menu-item-name">Baklava with Saffron Syrup</h3>
+          <p class="menu-item-story">Layers of filo, crushed pistachios, and saffron-infused honey. Served warm.</p>
+          <p class="menu-item-price">₹ 180</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────
+       SECTION 3 — CRAFT
+  ───────────────────────────── -->
+  <section id="craft" aria-label="Kitchen craft and culinary approach">
+    <div class="craft-video-wrap">
+      <img class="craft-img"
+           src="assets/kitchen_craft.png"
+           alt="The kitchen at work — open flame, olive oil shimmering in a cast iron pan, fresh herbs" />
+      <div class="craft-overlay" aria-hidden="true"></div>
+      <div class="craft-heat" aria-hidden="true"></div>
+
+      <div class="craft-content">
+        <div class="craft-counter" aria-hidden="true">03</div>
+        <div class="craft-items" role="list">
+          <div class="craft-item reveal-up" role="listitem">
+            <span class="craft-num">01</span>
+            <p class="craft-desc">Za'atar crust. Cold-pressed olive oil. Rested for two hours before plating.</p>
+          </div>
+          <div class="craft-item reveal-up delay-1" role="listitem">
+            <span class="craft-num">02</span>
+            <p class="craft-desc">Sumac-roasted vegetables. Local market produce, ordered daily.</p>
+          </div>
+          <div class="craft-item reveal-up delay-2" role="listitem">
+            <span class="craft-num">03</span>
+            <p class="craft-desc">Every sauce is finished by hand. No premix, no shortcuts — ever.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────
+       SECTION 4 — THE ROOM
+  ───────────────────────────── -->
+  <section id="the-room" aria-label="Our dining room">
+    <div class="room-sticky">
+      <div class="room-pan-wrap" aria-hidden="true">
+        <img class="room-pan-img"
+             src="assets/dining_room.png"
+             alt="The Calcutta Canteen dining room — warm brass pendants, linen tables, candlelight" />
+        <div class="room-overlay"></div>
+        <div class="room-glow" aria-hidden="true" style="opacity: 0; transition: opacity 0.5s;"></div>
+      </div>
+
+      <!-- Candle flicker element positioned over the image -->
+      <div class="candle-flame" aria-hidden="true" style="
+        position: absolute;
+        width: 14px; height: 22px;
+        left: 55%; top: 48%;
+        background: radial-gradient(ellipse at 50% 80%, #E8B84B 0%, rgba(201,132,58,0.6) 40%, transparent 70%);
+        border-radius: 50% 50% 30% 30%;
+        animation: flicker 0.9s ease-in-out infinite alternate;
+        pointer-events: none; z-index: 6;
+      "></div>
+
+      <div class="room-content">
+        <span class="section-eyebrow reveal-up" style="color: var(--clr-brass);">The Room</span>
+        <h2 class="room-headline">The room<br/><em>remembers you.</em></h2>
+        <p class="room-desc">
+          Durgapur's Mediterranean dining room. Fifty seats, set for an evening
+          that stays with you. Reservations recommended on weekends.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────
+       SECTION 5 — GUEST EXPERIENCE
+  ───────────────────────────── -->
+  <section id="guest-experience" aria-label="Dining experience">
+    <div class="guest-header">
+      <span class="section-eyebrow reveal-up">An Evening Here</span>
+      <h2 class="guest-headline reveal-up delay-1">
+        Warm conversations.<br/>
+        <em>Unhurried evenings.</em>
+      </h2>
+    </div>
+
+    <div class="guest-mosaic" role="list" aria-label="Dining moments">
+      <div class="mosaic-item" role="listitem">
+        <img src="assets/guest_dining.png"
+             alt="A couple sharing a candlelit Mediterranean dinner at The Calcutta Canteen" />
+        <div class="mosaic-vignette" aria-hidden="true"></div>
+      </div>
+      <div class="mosaic-item" role="listitem">
+        <img src="assets/dining_room.png"
+             alt="The Calcutta Canteen dining room set for an evening service" />
+        <div class="mosaic-vignette" aria-hidden="true"></div>
+      </div>
+      <div class="mosaic-item" role="listitem">
+        <img src="assets/ingredients_spread.png"
+             alt="Mediterranean ingredients — the craft behind every plate" />
+        <div class="mosaic-vignette" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <!-- Ambient ticker -->
+    <div class="guest-ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span class="ticker-item">Reservations Open</span>
+        <span class="ticker-dot">·</span>
+        <span class="ticker-item">Table for Two Available This Weekend</span>
+        <span class="ticker-dot">·</span>
+        <span class="ticker-item">QR-Code Menu at Every Table</span>
+        <span class="ticker-dot">·</span>
+        <span class="ticker-item">Dietary Notes Welcome</span>
+        <span class="ticker-dot">·</span>
+        <span class="ticker-item">Opposite Sanaka Hospital, Durgapur</span>
+        <span class="ticker-dot">·</span>
+        <span class="ticker-item">Mediterranean Menu — Live Now</span>
+        <span class="ticker-dot">·</span>
+        <span class="ticker-item">Open Tuesday to Sunday</span>
+        <span class="ticker-dot">·</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────
+       SECTION 6 — TRUST & CREDIBILITY
+  ───────────────────────────── -->
+  <section id="trust" aria-label="Our story and guest reviews">
+    <div class="trust-inner">
+
+      <span class="trust-eyebrow">A Note from the Kitchen</span>
+      <h2 class="trust-headline reveal-up">
+        We know what changed.<br/>
+        <em>Here's what you can expect.</em>
+      </h2>
+
+      <!-- Owner Note -->
+      <div class="owner-note-card reveal-up" role="note" aria-label="Message from ownership">
+        <div class="owner-note-text">
+          <p>
+            The Calcutta Canteen has been part of this neighbourhood for a while now.
+            We've served hospital staff on long shifts, students on tight budgets, and
+            families on ordinary evenings — and we're genuinely grateful for every one
+            of those guests.
+          </p>
+          <p>
+            We also know that we haven't always gotten everything right. A restaurant
+            is built on trust, and trust is built slowly and broken quickly. We've spent
+            the last several months not just redesigning the menu, but rethinking the way
+            we operate — our service standards, our kitchen practices, and how we handle
+            every guest interaction.
+          </p>
+          <p>
+            What's new: a dedicated Mediterranean menu, developed and tested over six months.
+            A retrained front-of-house team. A reservation system. A commitment that when
+            something goes wrong — we fix it.
+          </p>
+          <p>
+            We're not asking you to take our word for it. Come once, tell us what you think,
+            and let the evening speak for itself.
+          </p>
+        </div>
+        <div class="owner-note-sig" aria-label="Signed by">
+          The Calcutta Canteen Team, Durgapur
+        </div>
+      </div>
+
+      <!-- Live Reviews -->
+      <div class="trust-reviews-header">
+        <h3 class="trust-reviews-title">What Our Guests Are Saying</h3>
+        <a href="https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID"
+           target="_blank" rel="noopener noreferrer"
+           class="review-leave-link"
+           id="leave-review-top"
+           aria-label="Leave a Google review">
+          Leave a Review →
+        </a>
+      </div>
+
+      <!-- Review Cards Strip -->
+      <div class="reviews-strip" aria-label="Guest reviews">
+        <div class="reviews-track" role="list">
+
+          <!-- Static sample cards — in production, replace with Google Places API fetch -->
+          <article class="review-card" role="listitem">
+            <div class="review-stars" aria-label="5 stars">
+              <svg class="star star-filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="star star-filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="star star-filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="star star-filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="star star-filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="review-text">
+              "Came here after the renovation and was genuinely surprised. The hummus was excellent,
+              service was attentive and the room felt completely transformed. A proper dining experience."
+            </p>
+            <p class="review-meta">Priya S. · 2 weeks ago · Google</p>
+          </article>
+
+          <article class="review-card" role="listitem">
+            <div class="review-stars" aria-label="5 stars">
+              <svg class="star star-filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="star star-filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="star star-filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="star star-filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="star star-empty"  viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="#C9843A" stroke-width="1.5"/></svg>
+            </div>
+            <p class="review-text">
+              "Finally a place in Durgapur that feels special for a date night. The shawarma platter
+              was delicious, the ambiance with the candlelight was perfect. Will definitely be back."
+            </p>
+            <p class="review-meta">Rahul M. · 1 week ago · Google</p>
+          </article>
+
+          <article class="review-card" role="listitem">
+            <div class="review-stars" aria-label="5 stars">
+              <svg class="star star-filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="star star-filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="star star-filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="star star-filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="star star-filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="review-text">
+              "My family visits here regularly now. The staff remember your preferences, the food is
+              consistently good and the new menu has something for everyone. Much improved."
+            </p>
+            <p class="review-meta">Sunita D. · 3 weeks ago · Google</p>
+          </article>
+
+          <article class="review-card" role="listitem">
+            <div class="review-stars" aria-label="5 stars">
+              <svg class="star star-filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="star star-filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="star star-filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="star star-filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="star star-empty"  viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="#C9843A" stroke-width="1.5"/></svg>
+            </div>
+            <p class="review-text">
+              "Came for a colleague's birthday dinner. The baklava was outstanding and the
+              staff went out of their way to make it special. A proper celebration spot in Durgapur."
+            </p>
+            <p class="review-meta">Anirban G. · 5 days ago · Google</p>
+          </article>
+
+          <article class="review-card" role="listitem">
+            <div class="review-stars" aria-label="5 stars">
+              <svg class="star star-filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="star star-filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="star star-filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="star star-filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="star star-filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="review-text">
+              "Best food experience I've had near Sanaka. The QR menu ordering is seamless,
+              and the Mediterranean mezze platter is something genuinely new for this area."
+            </p>
+            <p class="review-meta">Debjani R. · 1 month ago · Google</p>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- QR Leave a Review -->
+      <div class="trust-qr-wrap reveal-up">
+        <div class="qr-frame" aria-label="QR code to leave a Google review">
+          <!-- Replace with actual generated QR code image linking to Google review page -->
+          <div class="qr-placeholder" title="Scan to leave a Google review"></div>
+        </div>
+        <div class="qr-text">
+          <h4>Help us write<br/><em>the next chapter.</em></h4>
+          <p>
+            Scan to leave a review after your visit — it takes 90 seconds
+            and means more to us than we can say.
+          </p>
+          <a href="https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID"
+             target="_blank" rel="noopener noreferrer"
+             id="leave-review-qr"
+             class="review-leave-link"
+             style="display: inline-block; margin-top: 1rem;"
+             aria-label="Open Google review page">
+            Or click here to review on Google →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────
+       SECTION 7 — RESERVATION
+  ───────────────────────────── -->
+  <section id="reservation" aria-label="Reserve your table">
+
+    <!-- Pendant light -->
+    <div class="pendant-wrap" aria-hidden="true">
+      <svg class="pendant-svg" viewBox="0 0 60 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Cable -->
+        <line x1="30" y1="0" x2="30" y2="80" stroke="#C9843A" stroke-width="1.5" opacity="0.6"/>
+        <!-- Pendant body -->
+        <ellipse cx="30" cy="100" rx="16" ry="8" fill="#1A1208" stroke="#C9843A" stroke-width="1.2"/>
+        <path d="M14 100 Q14 140 30 148 Q46 140 46 100" fill="#C9843A" opacity="0.3"/>
+        <path d="M16 102 Q16 138 30 146 Q44 138 44 102" fill="#E8B84B" opacity="0.15"/>
+        <!-- Flame glow at base -->
+        <ellipse cx="30" cy="148" rx="14" ry="6" fill="#E8B84B" opacity="0.25"/>
+        <ellipse cx="30" cy="148" rx="8"  ry="3" fill="#E8B84B" opacity="0.4"/>
+      </svg>
+      <div class="pendant-glow"></div>
+    </div>
+
+    <div class="res-inner">
+      <span class="section-eyebrow reveal-up" style="color: var(--clr-brass); margin-bottom: 0.8rem; display: block;">
+        Reserve a Table
+      </span>
+      <h2 class="res-headline reveal-up">
+        Tonight's table<br/><em>is waiting.</em>
+      </h2>
+      <p class="res-sub reveal-up delay-1">
+        Opposite Sanaka Hospital, Durgapur · Open Tuesday–Sunday, 12 pm – 10:30 pm
+      </p>
+
+      <form class="res-form" id="res-form" novalidate aria-label="Table reservation form">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="res-name">Your Name</label>
+            <input type="text" id="res-name" name="name" placeholder="Full name" required autocomplete="name" />
+          </div>
+          <div class="form-field">
+            <label for="res-phone">Contact Number</label>
+            <input type="tel" id="res-phone" name="phone" placeholder="+91 XXXXX XXXXX" required autocomplete="tel" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="res-date">Preferred Date</label>
+            <input type="date" id="res-date" name="date" required />
+          </div>
+          <div class="form-field">
+            <label for="res-time">Preferred Time</label>
+            <select id="res-time" name="time" required>
+              <option value="" disabled selected>Select time</option>
+              <option value="12:00">12:00 pm — Lunch</option>
+              <option value="13:00">1:00 pm</option>
+              <option value="14:00">2:00 pm</option>
+              <option value="19:00">7:00 pm — Dinner</option>
+              <option value="19:30">7:30 pm</option>
+              <option value="20:00">8:00 pm</option>
+              <option value="20:30">8:30 pm</option>
+              <option value="21:00">9:00 pm</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="res-party">Party Size</label>
+            <select id="res-party" name="party" required>
+              <option value="" disabled selected>Number of guests</option>
+              <option value="1">1 guest</option>
+              <option value="2">2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4 guests</option>
+              <option value="5">5 guests</option>
+              <option value="6">6 guests</option>
+              <option value="6+">6+ guests (large party)</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="res-occasion">Occasion (optional)</label>
+            <input type="text" id="res-occasion" name="occasion" placeholder="Birthday, anniversary…" />
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="res-notes">Dietary Notes or Requests</label>
+          <textarea id="res-notes" name="notes" placeholder="Vegetarian, allergies, special arrangements…"></textarea>
+        </div>
+        <button type="submit" class="res-btn" id="res-submit">Reserve My Table</button>
+      </form>
+
+      <!-- Alternative contact -->
+      <div class="res-alt">
+        <span class="res-alt-text">Prefer to call or message?</span>
+        <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener noreferrer"
+           class="res-alt-link" id="whatsapp-link" aria-label="Message us on WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+          </svg>
+          WhatsApp Us
+        </a>
+        <a href="tel:+91XXXXXXXXXX" class="res-alt-link" id="phone-link" aria-label="Call us">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.29 6.29l1.1-1.34a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          Call Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────
+       FOOTER
+  ───────────────────────────── -->
+  <footer role="contentinfo">
+    <div class="footer-grid">
+
+      <!-- Address & Hours -->
+      <div>
+        <span class="footer-col-title">Find Us</span>
+        <dl class="footer-info">
+          <dt>Address</dt>
+          <dd>Opposite Sanaka Hospital<br/>Durgapur, West Bengal, India</dd>
+          <dt>Hours</dt>
+          <dd>Tuesday – Sunday<br/>12:00 pm – 10:30 pm</dd>
+          <dt>Closed</dt>
+          <dd>Mondays</dd>
+        </dl>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <span class="footer-col-title">Navigate</span>
+        <ul class="footer-nav-list">
+          <li><a href="#arrival">Home</a></li>
+          <li><a href="#discovery">Our Story</a></li>
+          <li><a href="#discovery">The Menu</a></li>
+          <li><a href="#the-room">The Room</a></li>
+          <li><a href="#trust">Reviews</a></li>
+          <li><a href="#reservation">Reserve a Table</a></li>
+        </ul>
+      </div>
+
+      <!-- Social & Review -->
+      <div>
+        <span class="footer-col-title">Connect</span>
+        <div class="footer-social">
+          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" id="footer-maps" aria-label="View on Google Maps">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            View on Google Maps
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" id="footer-instagram" aria-label="Follow on Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+            </svg>
+            Instagram
+          </a>
+          <a href="https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID"
+             target="_blank" rel="noopener noreferrer"
+             id="footer-review"
+             aria-label="Leave a Google review">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            Leave a Google Review
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        © 2026 The Calcutta Canteen, Durgapur. All rights reserved.
+      </p>
+      <p class="footer-copy">
+        Built with intention — for the neighbourhood.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Audio toggle -->
+  <button id="audio-toggle" aria-label="Toggle ambient audio" title="Play ambient audio" data-playing="false">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M11 5L6 9H2v6h4l5 4V5z" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M15.54 8.46a5 5 0 010 7.07" stroke-linecap="round"/>
+      <path d="M19.07 4.93a10 10 0 010 14.14" stroke-linecap="round"/>
+    </svg>
+  </button>
+
+  <!-- Candle flicker keyframe -->
+  <style>
+    @keyframes flicker {
+      0%   { opacity: 0.85; transform: skewX(-2deg) scaleY(0.97); }
+      25%  { opacity: 1;    transform: skewX( 2deg) scaleY(1.02); }
+      50%  { opacity: 0.9;  transform: skewX(-1deg) scaleY(0.98); }
+      75%  { opacity: 1;    transform: skewX( 1deg) scaleY(1.01); }
+      100% { opacity: 0.88; transform: skewX(-2deg) scaleY(0.96); }
+    }
+  </style>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
